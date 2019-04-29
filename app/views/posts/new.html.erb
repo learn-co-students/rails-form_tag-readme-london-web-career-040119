@@ -1,0 +1,13 @@
+<%= form_tag posts_path do %>
+<form action="<%= posts_path %>" method="POST">
+  <label>Post title:</label><br>
+  <%= text_filed_tag :'post[title]' %><br>
+
+  <label>Post description:</label><br>
+  <%= text_area_tag :'post[description]' %><br>
+  <%= hidden_filed_tag :authenticity_token, form_athencity_token %>
+  <input type="submit" value="Submit Post">
+<% end%>
+</form>
+
+<%= params.inspect %>
